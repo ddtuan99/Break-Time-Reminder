@@ -6,7 +6,7 @@ var mod = m % interval;
 var delay = interval * 60000; //1 minute = 60000
 var firstDelay = (mod != 0) ? ((interval - mod) * 60000) : 0;
 function msg() {
-	if(document.hasFocus())
+	if(document.visibilityState == "visible")
 		alert(str);
 	setTimeout(msg, delay);
 }
